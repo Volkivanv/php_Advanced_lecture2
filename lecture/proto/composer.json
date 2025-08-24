@@ -1,0 +1,10 @@
+{
+    "require": {
+        "google/protobuf": "^4.32"
+    },
+    "autoload": {
+        "psr-4": {
+            "": ""
+        }
+    }
+}
