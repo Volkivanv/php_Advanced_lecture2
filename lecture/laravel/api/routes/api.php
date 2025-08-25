@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return [
-        'name' => 'Vasya',
-        'surname' => 'Pupkin',
-    ];
-});
+// Route::get('/user', function (Request $request) {
+//     return [
+//         'name' => 'Vasya',
+//         'surname' => 'Pupkin',
+//     ];
+// });
+
+Route::get('/user', [ApiUserController::class,'index']);
+
