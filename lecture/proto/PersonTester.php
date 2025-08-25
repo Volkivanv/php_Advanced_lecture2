@@ -9,4 +9,9 @@ $person->setName('Mr. Anderson');
 $person->setAge(33);
 $person->setAddress(['Moscow']);
 
-echo $person->serializeToString();
+//echo $person->serializeToString();
+
+$binary = $person->serializeToString();
+$newPerson = new Person();
+$newPerson->mergeFromString($binary);
+echo $newPerson->getName();
